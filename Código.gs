@@ -16,7 +16,7 @@
  * cell >> cel reference.
  * value >> current value.
  * max >> max value.
- * reDrawEvery >> Redraw step.
+ * reDrawEvery >> Redraw steps.
  * reDrawCount >> Actual redraw step.
  * color1 >> left color (full).
  * color2 >> right color (empty).
@@ -30,7 +30,10 @@
  * half()  >> Sets progress bar to 50%.
  *
  * @OnlyCurrentDoc
- */
+ *
+ * MIT License
+ * Copyright (c) 2020 Pablo Felip Monferrer(@pfelipm)
+ */ 
  
 function ProgressBar(cellFullRef, value = 0, max = 100, reDrawEvery = 1, color1 = '#46bdc6', color2 = '#999999', flushSheet = false) {
   
@@ -57,6 +60,7 @@ function ProgressBar(cellFullRef, value = 0, max = 100, reDrawEvery = 1, color1 
                                                                                          + this.color1 
                                                                                          + '";"color2"\\"' 
                                                                                          + this.color2 + '"})');
+      // Using `..` in this line 👇 breaks auto indenting in the editor
       // SpreadsheetApp.getActiveSpreadsheet().getRange(this.cell).setFormula(`SPARKLINE({${this.value}\\${this.max - this.value}};{"charttype"\\"bar";"color1"\\"${this.color1}";"color2"\\"${this.color2}"})`);                                                                              
       if (this.flush) SpreadsheetApp.flush();
     
