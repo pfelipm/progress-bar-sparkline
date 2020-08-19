@@ -54,7 +54,7 @@ progressBar1.halve();  // Set at 50%
 progressBar1.fill();   // Set at 100%
 ```
 
-You can instantiate more progress bars, should you need them, and manage each of them separately.
+You can instantiate more progress bars, should you need it, and manage each of them separately.
 
 Check source code for all class properties and more info about methods.
 
