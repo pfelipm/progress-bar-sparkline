@@ -15,7 +15,7 @@ Two ways to use this:
 
 1.  Open the Apps Script editor in your spreadsheet (`Tools` 🠲 `Script editor`), paste the provided code (**PB.gs** and/or **PB (ES6 class).gs**) and save. You must use the _not-so-new-now_ JavaScript V8 GAS engine (`Ejecutar` 🠲 `Enable new Apps Script runtime ... V8`).
 2.  Import as library:
-    *   Open GAS editor.
+    *   Open your own project in the GAS editor.
     *   Resources 🠲 Libraries.
     *   Add a library, project key: **Mvzrd2GnnBN6AmaTRJzQGHIlk-AYma6-o**.
     *   Input a suitable identifier (e.g. **pb**).
