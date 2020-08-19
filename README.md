@@ -60,7 +60,7 @@ Check source code for all class properties and more info about methods.
 
 # Under the hood (code review :gear:)
 
-Nothing really relevant this time besides the need to (somewhat) export ES6 classes when using as a library just to be able to invoke their methods and the impossibility (to the best of my knowledge) to prepare proper JSDoc contextual help. A pity.
+Nothing really relevant this time besides the need to (somewhat) export ES6 classes when using them inside a library just to be able to invoke their methods and the impossibility (to the best of my knowledge) to prepare proper JSDoc contextual help. A pity.
 
 ```javascript
 // This makes class ProgressBarClassExt methods available when used as a library (thanks to @stevenbazyl for the tip)
