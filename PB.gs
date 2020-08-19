@@ -9,7 +9,9 @@
  * @param {number} reDrawEvery Progress bar will only redraw every reDrawEvery calls.
  * @param {string} color1 String representing the hexa color of the filled part (left) of the progress bar.
  * @param {string} color2 String representing the hexa color of the empty part (right) of the progress bar.
- * @param {boolean} flushSheet If set to TRUE forces a flush of the sheet with every update.
+ * @param {boolean} flushSheet If set to TRUE forces a flush of the sheet after every update.
+ *
+ *  Contextual JSDoc help is not working for methods when using as a library.
  *
  * Properties:
  * -----------
@@ -41,15 +43,22 @@ function ProgressBar(cellFullRef, value = 0, max = 100, reDrawEvery = 1, color1 
   this.value = value;
   this.max = max;
   this.reDrawEvery = reDrawEvery;
-  this.reDrawCount = 0;
+  this.reDrawCount = -1; // First update inside constructor does not count
   this.color1 = color1;
   this.color2 = color2;
   this.flush = flushSheet;
                 
   //  Updates progress bar, uses object properties if a new value is not provided
+  
+  /**
+   * Updates progress bar, uses object properties if a new value is not provided
+   * @param {number} value Actual value for the progress bar.
+   * @param {boolean} forceRedraw Redraws progress bar even though reDrawcount is not reached.
+   */
+  
   this.update = function(value = this.value, forceRedraw) {
     
-    this.reDrawCount = (this.reDrawCount + 1) % this.reDrawEvery
+    this.reDrawCount = (this.reDrawCount + 1) % this.reDrawEvery;
     if (this.reDrawCount == 0 || forceRedraw) {
     
       this.value = value < 0 ? 0 : value > this.max ? this.max : value;
@@ -60,25 +69,25 @@ function ProgressBar(cellFullRef, value = 0, max = 100, reDrawEvery = 1, color1 
                                                                                          + this.color1 
                                                                                          + '";"color2"\\"' 
                                                                                          + this.color2 + '"})');
-      // Using `..` in this line 👇 breaks auto indenting in the editor
+      // Using ES6 strings in this line 👇 breaks auto indenting in the editor
       // SpreadsheetApp.getActiveSpreadsheet().getRange(this.cell).setFormula(`SPARKLINE({${this.value}\\${this.max - this.value}};{"charttype"\\"bar";"color1"\\"${this.color1}";"color2"\\"${this.color2}"})`);                                                                              
+      
       if (this.flush) SpreadsheetApp.flush();
     
     }
                   
   }
 
-  // Resets progress bar                  
+  // Sets progress bar to 0%                  
   this.clear = function() {this.update(0, true);}
   
-  // Fills progress bar                  
+  // Sets progress bar to 100%                  
   this.fill = function() {this.update(this.max, true);}
                   
-  // Fills progress bar                  
+  // Sets progress bar to 50%
   this.half = function() {this.update(Math.round(this.max / 2), true);}
   
-  // Draw progress bar ends object constructor (function constructors are not hoisted)
-  
+  // Draw progress bar after object constructor code + methods (function constructors are not hoisted)
   this.update(this.value, true);
   
 }
