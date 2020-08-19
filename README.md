@@ -25,7 +25,7 @@ See demo and code sample here :point\_right: [Progress bar SPARKLINE # demo](htt
 
 ![Progress bar SPARKLINE # demo - Hojas de cálculo de Google](https://user-images.githubusercontent.com/12829262/90616041-36cbce80-e20d-11ea-99a0-7973273da378.gif)
 
-In your GAS project, initialize a progress bar in cell **A10** of sheet **Test** with an initial value of **0** and max value of **100** like this (using the function constructor version in **PB.gs**):
+In your GAS project, initialize a progress bar in cell **A10** of sheet **Test** with an initial value of **0** and max value of **100** like this (notice the `pb.`, I am using the function constructor version in **PB.gs** as an imported library):
 
 ```javascript
 let progressBar1 = new pb.ProgressBar('Test!A10', 0, 100);
