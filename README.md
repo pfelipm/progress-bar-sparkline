@@ -32,13 +32,34 @@ See demo and here :point\_right: [Progress bar SPARKLINE # demo](https://docs.go
 
 In your project, initialize a progress bar in cell **A10** of sheet **Test** with an initial value of **0** and max value of **100** like this:
 
-```
+```javascript
 let progressBar1 = new pb.ProgressBar('Test!A10', 0, 100);
 ```
 
-Other parameters (bar colors, step, flush sheet will take defaults).
+Unspecified parameters (_bar colors_, _step_, _flush sheet_ will take defaults). This will inject a SPARKLINE() function in cell `Test!A10`. To update its state:
 
-Check source code (demo & library) for class properties and methods.
+```javascript
+progressBar1.value = 25;
+progressBar1.value.update();
+```
+
+...or simply:
+
+```javascript
+progressBar1.update(25);
+```
+
+You can also use:
+
+```javascript
+progressBar1.clear() // Set at 0%
+progressBar1.halve() // Set at 50%
+progressBar1.fill() // Set at 100%
+```
+
+You can instantiate more progress bars, should you need them, and manage each of them separately.
+
+Check source code for all class properties and more info about methods.
 
 # **Licencia**
 
