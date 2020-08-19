@@ -4,8 +4,8 @@
 
 Extremely simple functions to create and manage something akin to progress bars in Google Sheets using the built in function `SPARKLINE()`, built just for my own learning of Apps Script libraries :blush: . Two versions are provided:
 
-*   **PB.gs**: Implemented using a simple constructor function. This provides JSDoc contextual help (just for the constructor, though) when importing as a GAS library.
-*   **PB (ES6 class).gs**: Implemented using a ES6 class. I've not managed to get any JSDoc-style help at all. In this case the class needs to be explicitly exported for it to be used as a library.
+*   **PB.gs**: Implementation using a simple constructor function. This provides JSDoc contextual help (just for the constructor, though) when importing as a GAS library.
+*   **PB (ES6 class).gs**: Implementation using a ES6 class. I've not managed to get any JSDoc-style help at all. In this case the class needs to be explicitly exported for it to be used as a library.
 
 # Instructions
 
