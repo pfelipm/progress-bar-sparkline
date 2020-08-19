@@ -8,6 +8,6 @@ Extremely simple functions to create and manage something akin to progress bars 
 *   **PB (ES6 class).gs**: Implemented using a ES6 class. I've not managed to get any JSDoc-style help at all. In this case the class needs to be explicitly exported for it to be used as a library like this:
 
 ```
-// This declaration makes class ProgressBarClassExt methods available when using as a library (thanks to @stevenbazyl for the tip)
+// This makes class ProgressBarClassExt methods available when using as a library (thanks to @stevenbazyl for the tip)
 var ProgressBarES6Ext = ProgressBarES6; 
 ```
