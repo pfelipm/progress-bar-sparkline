@@ -69,4 +69,4 @@ var ProgressBarES6Ext = ProgressBarES6;
 
 # License
 
-© 2020 Pablo Felip Monferrer ([@pfelipm](https://twitter.com/pfelipm)). Se distribuye bajo licencia MIT.
+© 2020 Pablo Felip Monferrer ([@pfelipm](https://twitter.com/pfelipm)). Provided under MIT License.
