@@ -4,7 +4,7 @@
 
 Extremely simple functions to create and manage something akin to progress bars in Google Sheets using the built in function `SPARKLINE()`, built just for my own learning of Apps Script libraries :blush: . Two versions are provided:
 
-*   **PB.gs**: Implemented using a simple constructor function. This provides JSDoc contextual help (not for methods, though) when importing as a GAS library.
+*   **PB.gs**: Implemented using a simple constructor function. This provides JSDoc contextual help (just for the constructor, though) when importing as a GAS library.
 *   **PB (ES6 class).gs**: Implemented using a ES6 class. I've not managed to get any JSDoc-style help at all. In this case the class needs to be explicitly exported for it to be used as a library like this:
 
 ```
@@ -12,9 +12,9 @@ Extremely simple functions to create and manage something akin to progress bars 
 var ProgressBarES6Ext = ProgressBarES6; 
 ```
 
-# **Modo de uso**
+# Instructions
 
-Two ways:
+Two ways to use:
 
 1.  Open the Apps Script editor in your spreadsheet (`Tools` 🠲 `Script editor`), paste the provided code (**PB.gs** and/or **PB (ES6 class).gs**) and save. You must use the _not-so-new-now_ JavaScript V8 GAS engine (`Ejecutar` 🠲 `Enable new Apps Script runtime ... V8`).
 2.  Import as library:
@@ -30,7 +30,7 @@ See demo and here :point\_right: [Progress bar SPARKLINE # demo](https://docs.go
 
 ![Progress bar SPARKLINE # demo - Hojas de cálculo de Google](https://user-images.githubusercontent.com/12829262/90616041-36cbce80-e20d-11ea-99a0-7973273da378.gif)
 
-In your project, initialize a progress bar in cell **A10** of sheet **Test** with an initial value of **0** and max value of **100** like this:
+In your project, initialize a progress bar in cell **A10** of sheet **Test** with an initial value of **0** and max value of **100** like this (using the function constructor version in **PB.gs**):
 
 ```javascript
 let progressBar1 = new pb.ProgressBar('Test!A10', 0, 100);
@@ -40,7 +40,7 @@ Unspecified parameters (_bar colors_, _step_, _flush sheet_ will take defaults).
 
 ```javascript
 progressBar1.value = 25;
-progressBar1.value.update();
+progressBar1.update();
 ```
 
 ...or simply:
@@ -49,18 +49,27 @@ progressBar1.value.update();
 progressBar1.update(25);
 ```
 
-You can also use:
+You can also do:
 
 ```javascript
-progressBar1.clear() // Set at 0%
-progressBar1.halve() // Set at 50%
-progressBar1.fill() // Set at 100%
+progressBar1.clear();  // Set at 0%
+progressBar1.halve();  // Set at 50%
+progressBar1.fill();   // Set at 100%
 ```
 
 You can instantiate more progress bars, should you need them, and manage each of them separately.
 
 Check source code for all class properties and more info about methods.
 
-# **Licencia**
+# Under the hood (code review :gear:)
+
+Nothing really relevant this time besides the need to (somewhat) export ES6 classes when using as a library just to be able to invoke their methods and the impossibility (to the best of my knowledge) to prepare proper JSDoc contextual help. A pity.
+
+```javascript
+// This declaration makes class ProgressBarClassExt methods available when using as a library (thanks to @stevenbazyl for the tip)
+var ProgressBarES6Ext = ProgressBarES6;
+```
+
+# License
 
 © 2020 Pablo Felip Monferrer ([@pfelipm](https://twitter.com/pfelipm)). Se distribuye bajo licencia MIT.
