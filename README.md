@@ -16,7 +16,7 @@ Two ways to use this functions:
 1.  Open the Apps Script editor in your spreadsheet (`Tools` ⇒ `Script editor`), paste the provided code (**PB.gs** and/or **PB (ES6 class).gs**) and save. You must use the _already-not-so-new_ JavaScript V8 GAS engine (`Run` ⇒ `Enable new Apps Script runtime ... V8`).
 2.  Import as library:
     *   Open your own project in the GAS editor.
-    *   Resources ⇒ Libraries.
+    *   `Resources` ⇒ `Libraries`.
     *   Add a library, project key: **Mvzrd2GnnBN6AmaTRJzQGHIlk-AYma6-o**.
     *   Input a suitable identifier, e.g. **pbs** (don't ever use 'pb' or you won't get contextual help for the constructor :man\_shrugging:).
     *   Save changes.
