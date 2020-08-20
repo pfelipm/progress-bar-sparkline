@@ -69,6 +69,8 @@ Nothing really relevant this time besides (a) the need to (somewhat) export ES6 
 var ProgressBarES6Ext = ProgressBarES6;
 ```
 
+I think that in order to prevent non-integer numbers in some properties more elegantly I should have used [setter functions](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/set) inside my class... but anyway, in the end this is little more than a first attempt at getting a grasp of libraries.
+
 # License
 
 © 2020 Pablo Felip Monferrer ([@pfelipm](https://twitter.com/pfelipm)). Provided under MIT License.
