@@ -75,8 +75,9 @@ class ProgressBarES6 {
     this.reDrawCount = (this.reDrawCount + 1) % this.reDrawEvery;
     if (this.reDrawCount == 0 || forceRedraw) {
     
+      value = Math.round(value);
       this.max = Math.round(this.max);    
-      this.value = Math.round(value < 0 ? 0 : value > this.max ? this.max : value);
+      this.value = value < 0 ? 0 : value > this.max ? this.max : value;
       SpreadsheetApp.getActiveSpreadsheet().getRange(this.cell).setFormula('SPARKLINE({' + this.value
                                                                                          + '\\' 
                                                                                          + (this.max - this.value)
