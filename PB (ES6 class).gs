@@ -29,7 +29,7 @@
  * update([value], forceRedraw) >> Updates progress bar status. If value is not provided property .value is used.
  * clear() >> Sets progress bar to 0%.
  * fill()  >> Sets progress bar to 100%.
- * halve()  >> Sets progress bar to 50%.
+ * halve() >> Sets progress bar to 50%.
  *
  * @OnlyCurrentDoc
  *
