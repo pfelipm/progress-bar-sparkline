@@ -27,13 +27,15 @@ See demo and code sample here :point\_right: [Progress bar SPARKLINE # demo](htt
 
 ![Progress bar SPARKLINE # demo - Hojas de cálculo de Google](https://pablofelip.online/media/posts/14/ezgif.com-video-to-gif.gif)
 
-In your GAS project, initialize a progress bar in cell **A10** of sheet **Test** with an initial value of **0** and max value of **100** like this (notice the `pb.`, I am using the constructor function version in **PB.gs** as an imported library here):
+In your GAS project, initialize a progress bar in cell **A10** of sheet **Test** with an initial value of **0** and max value of **100** like this (notice the `pb.`, I am using the constructor function version in **PB.gs** as an imported library here). This will inject a SPARKLINE() function in cell `Test!A10`:
 
 ```javascript
 let progressBar1 = new pb.ProgressBar('Test!A10', 0, 100);
 ```
 
-Unspecified parameters (_bar colors_, _step_, _flush sheet_ will take defaults). This will inject a SPARKLINE() function in cell `Test!A10`. To update its state:
+Unspecified parameters (_bar colors_, _step_, _flush sheet_ will take defaults). `Value` and `Max` parameters are always rounded.
+
+To update its state:
 
 ```javascript
 progressBar1.value = 25;
