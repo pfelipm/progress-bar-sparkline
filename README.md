@@ -33,7 +33,7 @@ In your GAS project, initialize a progress bar in cell **A10** of sheet **Test**
 let progressBar1 = new pbs.ProgressBar('Test!A10', 0, 100);
 ```
 
-Unspecified parameters (_bar colors_, _step_, _flush sheet_ will take defaults). `Value`, `Max` and step (`reDrawEvery`) parameters are always rounded.
+Unspecified parameters (_bar colors_, _step_, _flush sheet_ will take defaults). `Value`, `Max` and step (`reDrawEvery`, not used in this example) parameters are always rounded.
 
 To update progress:
 
