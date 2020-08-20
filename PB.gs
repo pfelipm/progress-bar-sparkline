@@ -88,7 +88,7 @@ function ProgressBar(cellFullRef, value = 0, max = 100, reDrawEvery = 1, color1 
   this.fill = function() {this.update(this.max, true);}
                   
   // Sets progress bar to 50%
-  this.halve = function() {this.update(Math.round(this.max / 2), true);}
+  this.halve = function() {this.update(this.max / 2, true);}
   
   // Draw progress bar after object constructor code + methods (function constructors are not hoisted)
   this.update(this.value, true);

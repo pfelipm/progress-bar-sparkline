@@ -100,7 +100,7 @@ class ProgressBarES6 {
   fill() {this.update(this.max, true);}
                   
   // Sets progress bar to 50%                  
-  halve() {this.update(Math.round(this.max / 2), true);}
+  halve() {this.update(this.max / 2, true);}
   
 }
 
