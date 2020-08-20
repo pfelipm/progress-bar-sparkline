@@ -18,10 +18,10 @@ Two ways to use this:
     *   Open your own project in the GAS editor.
     *   Resources ⇒ Libraries.
     *   Add a library, project key: **Mvzrd2GnnBN6AmaTRJzQGHIlk-AYma6-o**.
-    *   Input a suitable identifier (e.g. **pb**).
+    *   Input a suitable identifier, e.g. **pbs** (don't ever use 'pb' or you won't get contextual help for the constructor :man\_shrugging:).
     *   Save changes.
 
-![addaslib](https://user-images.githubusercontent.com/12829262/90613499-be174300-e209-11ea-9ee4-2da9cee2357c.png)
+![Selección_374](https://user-images.githubusercontent.com/12829262/90753459-ee79e280-e2d8-11ea-9bbf-b46605bc521b.png)
 
 See demo and code sample here :point\_right: [Progress bar SPARKLINE # demo](https://docs.google.com/spreadsheets/d/1NYzgkpvAhWJdldczHv4EgRfznpjeJ_lRDrkPLGy73iQ/template/preview) :point\_left:.
 
@@ -30,7 +30,7 @@ See demo and code sample here :point\_right: [Progress bar SPARKLINE # demo](htt
 In your GAS project, initialize a progress bar in cell **A10** of sheet **Test** with an initial value of **0** and max value of **100** like this (notice the `pb.`, I am using the constructor function version in **PB.gs** as an imported library here). This will inject a SPARKLINE() function in cell `Test!A10`:
 
 ```javascript
-let progressBar1 = new pb.ProgressBar('Test!A10', 0, 100);
+let progressBar1 = new pbs.ProgressBar('Test!A10', 0, 100);
 ```
 
 Unspecified parameters (_bar colors_, _step_, _flush sheet_ will take defaults). `Value`, `Max` and step (`reDrawEvery`) parameters are always rounded.
