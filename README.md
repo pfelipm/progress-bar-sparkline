@@ -25,7 +25,7 @@ Two ways to use this:
 
 See demo and code sample here :point\_right: [Progress bar SPARKLINE # demo](https://docs.google.com/spreadsheets/d/1NYzgkpvAhWJdldczHv4EgRfznpjeJ_lRDrkPLGy73iQ/template/preview) :point\_left:.
 
-![Progress bar SPARKLINE # demo - Hojas de cálculo de Google](https://user-images.githubusercontent.com/12829262/90616041-36cbce80-e20d-11ea-99a0-7973273da378.gif)
+![Progress bar SPARKLINE # demo - Hojas de cálculo de Google](https://pablofelip.online/media/posts/14/ezgif.com-video-to-gif.gif)
 
 In your GAS project, initialize a progress bar in cell **A10** of sheet **Test** with an initial value of **0** and max value of **100** like this (notice the `pb.`, I am using the constructor function version in **PB.gs** as an imported library here):
 
