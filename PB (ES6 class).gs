@@ -29,7 +29,7 @@
  * update([value], forceRedraw) >> Updates progress bar status. If value is not provided property .value is used.
  * clear() >> Sets progress bar to 0%.
  * fill()  >> Sets progress bar to 100%.
- * half()  >> Sets progress bar to 50%.
+ * halve()  >> Sets progress bar to 50%.
  *
  * @OnlyCurrentDoc
  *
@@ -97,9 +97,9 @@ class ProgressBarES6 {
   fill() {this.update(this.max, true);}
                   
   // Sets progress bar to 50%                  
-  half() {this.update(Math.round(this.max / 2), true);}
+  halve() {this.update(this.max / 2, true);}
   
 }
 
-// This declaration makes class ProgressBarClassExt methods available when using as a library (thanks to @stevenbazyl for the tip)
+// This declaration makes class ProgressBarClassExt methods available when used as a library (thanks to @stevenbazyl for the tip)
 var ProgressBarES6Ext = ProgressBarES6;
