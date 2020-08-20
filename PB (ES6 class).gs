@@ -52,8 +52,8 @@ class ProgressBarES6 {
   constructor(cellFullRef, value = 0, max = 100, reDrawEvery = 1, color1 = '#46bdc6', color2 = '#999999', flushSheet = false) {
   
     this.cell = cellFullRef;
-    this.value = value;
-    this.max = max;
+    this.value = Math.round(value);
+    this.max = Math.round(max);
     this.reDrawEvery = reDrawEvery;
     this.reDrawCount = -1; // First update does not count
     this.color1 = color1;
@@ -74,10 +74,11 @@ class ProgressBarES6 {
     this.reDrawCount = (this.reDrawCount + 1) % this.reDrawEvery;
     if (this.reDrawCount == 0 || forceRedraw) {
     
-      this.value = value < 0 ? 0 : value > this.max ? this.max : value;
+      this.value = Math.round(value < 0 ? 0 : value > this.max ? this.max : value);
+      this.max = Math.round(this.max);
       SpreadsheetApp.getActiveSpreadsheet().getRange(this.cell).setFormula('SPARKLINE({' + this.value
                                                                                          + '\\' 
-                                                                                         + (this.max - this.value) 
+                                                                                         + (this.max - this.value)
                                                                                          + '};{"charttype"\\"bar";"color1"\\"' 
                                                                                          + this.color1 
                                                                                          + '";"color2"\\"' 
@@ -97,7 +98,7 @@ class ProgressBarES6 {
   fill() {this.update(this.max, true);}
                   
   // Sets progress bar to 50%                  
-  halve() {this.update(this.max / 2, true);}
+  halve() {this.update(Math.round(this.max / 2), true);}
   
 }
 
