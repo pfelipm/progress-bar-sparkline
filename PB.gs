@@ -11,7 +11,7 @@
  * @param {string} color2 String representing the hexa color of the empty part (right) of the progress bar.
  * @param {boolean} flushSheet If set to TRUE forces a flush of the sheet after every update.
  *
- *  Contextual JSDoc help is not working for methods when using as a library.
+ *  Contextual JSDoc help is not working for methods when used as a library.
  *
  * Properties:
  * -----------
