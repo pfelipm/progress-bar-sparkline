@@ -33,7 +33,7 @@ In your GAS project, initialize a progress bar in cell **A10** of sheet **Test**
 let progressBar1 = new pbs.ProgressBar('Test!A10', 0, 100);
 ```
 
-This will inject a SPARKLINE() function in cell `Test!A10`. Unspecified parameters (_bar colors_, _step_, _flush sheet_ will take defaults). `Value`, `Max` and step (`reDrawEvery`, not used in this example) parameters are always rounded.
+This will inject a SPARKLINE() function in cell `Test!A10`. Unspecified parameters (_bar colors_, _step_, _flush sheet_) will take default values. `Value`, `Max` and step (`reDrawEvery`, not used in this example) parameters are always rounded.
 
 To update progress:
 
