@@ -18,7 +18,7 @@ Two ways to use this functions:
     *   Open your own project in the GAS editor.
     *   `Resources` ⇒ `Libraries`.
     *   Add a library, project key: **Mvzrd2GnnBN6AmaTRJzQGHIlk-AYma6-o**.
-    *   Input a suitable identifier, e.g. **pbs** (don't ever use 'pb' or you won't get contextual help for the constructor :man\_shrugging:).
+    *   Input a suitable identifier, e.g. **pbs** (don't ever use 'pb' or you won't get contextual help for the constructor function :man\_shrugging:).
     *   Save changes.
 
 ![Selección_374](https://user-images.githubusercontent.com/12829262/90753459-ee79e280-e2d8-11ea-9bbf-b46605bc521b.png)
@@ -27,7 +27,7 @@ See demo and code sample here :point\_right: [Progress bar SPARKLINE # demo](htt
 
 ![Progress bar SPARKLINE # demo - Hojas de cálculo de Google](https://pablofelip.online/media/posts/14/ezgif.com-video-to-gif.gif)
 
-In your GAS project, initialize a progress bar in cell **A10** of sheet **Test** with an initial value of **0** and max value of **100** like this (notice the `pb.`, I am using the constructor function version in **PB.gs** as an imported library here):
+In your GAS project, initialize a progress bar in cell **A10** of sheet **Test** with an initial value of **0** and max value of **100** like this (notice the `pbs.`, I am using the constructor function version in **PB.gs** as an imported library here):
 
 ```javascript
 let progressBar1 = new pbs.ProgressBar('Test!A10', 0, 100);
