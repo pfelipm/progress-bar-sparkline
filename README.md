@@ -19,7 +19,7 @@ Two ways to use this functions:
     *   `Resources` ⇒ `Libraries`.
     *   Add a library:
         *   Project key (old IDE) → **Mvzrd2GnnBN6AmaTRJzQGHIlk-AYma6-o**.
-        *   Deployment ID (new IDE) **→ 1xJe9eFH3a9u7Tu3RVSoq8I9GO2rEIJamaLQFyfCUwsuAYiF3xQm4I28T.**
+        *   Deployment ID (old or new IDE) **→ 1xJe9eFH3a9u7Tu3RVSoq8I9GO2rEIJamaLQFyfCUwsuAYiF3xQm4I28T.**
     *   Input a suitable identifier, e.g. **pbs** (don't ever use 'pb' or you won't get contextual help for the constructor function :man\_shrugging:).
     *   Save changes.
 
