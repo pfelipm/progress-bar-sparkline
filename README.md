@@ -17,9 +17,9 @@ Two ways to use this functions:
 2.  Import as library:
     *   Open your own project in the GAS editor.
     *   `Resources` ⇒ `Libraries`.
-    *   Add a library, project key:
-        *   Old IDE → **Mvzrd2GnnBN6AmaTRJzQGHIlk-AYma6-o**.
-        *   New IDE **→ 1xJe9eFH3a9u7Tu3RVSoq8I9GO2rEIJamaLQFyfCUwsuAYiF3xQm4I28T.**
+    *   Add a library:
+        *   Project key (old IDE) → **Mvzrd2GnnBN6AmaTRJzQGHIlk-AYma6-o**.
+        *   Deployment ID (nNew IDE) **→ 1xJe9eFH3a9u7Tu3RVSoq8I9GO2rEIJamaLQFyfCUwsuAYiF3xQm4I28T.**
     *   Input a suitable identifier, e.g. **pbs** (don't ever use 'pb' or you won't get contextual help for the constructor function :man\_shrugging:).
     *   Save changes.
 
