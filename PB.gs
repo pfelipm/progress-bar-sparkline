@@ -15,7 +15,7 @@
  *
  * Properties:
  * -----------
- * cell >> cel reference.
+ * cell >> cell reference.
  * value >> current value.
  * max >> max value.
  * reDrawEvery >> Redraw steps.
