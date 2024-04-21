@@ -31,8 +31,6 @@
  * fill()  >> Sets progress bar to 100%.
  * halve() >> Sets progress bar to 50%.
  *
- * @OnlyCurrentDoc
- *
  * MIT License
  * Copyright (c) 2020 Pablo Felip Monferrer(@pfelipm)
  */ 
